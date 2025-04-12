@@ -9,13 +9,13 @@ public class BulletScript : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        
+        rb2d.AddForce(transform.up * strenght, ForceMode2D.Impulse);
         Destroy(gameObject, 1f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb2d.AddForce(transform.up * strenght * Time.deltaTime, ForceMode2D.Impulse);
+        
     }
 }
